@@ -21,7 +21,7 @@ import javax.persistence.Temporal;
  * @author Alexander Elias
  */
 @Entity
-@Table(name = "COMENTARIOS", schema = "TB_COMENTARIOS")
+@Table(name = "COMENTARIOS", schema = "DB_COMENTARIOS")
 public class Comentarios {
 
     @Id
