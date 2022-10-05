@@ -7,8 +7,10 @@ package com.dase.gestorcomentarios.services.impl;
 
 import com.dase.gestorcomentarios.commons.CommonSvcImpl;
 import com.dase.gestorcomentarios.entities.Comentarios;
+import com.dase.gestorcomentarios.projection.ComentarioProjection;
 import com.dase.gestorcomentarios.repositories.ComentariosRepository;
 import com.dase.gestorcomentarios.services.ComentariosSvc;
+import java.util.List;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,5 +19,10 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ComentariosSvcImpl extends CommonSvcImpl<Comentarios,ComentariosRepository> implements   ComentariosSvc{
+
+    @Override
+    public List<ComentarioProjection> findComentarioByIdTarea(Long id) {
+        return this.repository.findComentarioByIdTarea(id);
+    }
     
 }
