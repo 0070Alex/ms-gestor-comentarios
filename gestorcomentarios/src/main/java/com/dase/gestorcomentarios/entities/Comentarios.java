@@ -37,7 +37,6 @@ public class Comentarios {
     private String comentario;
     
     @Column(name = "FECHA_ADICION")
-    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     private Date fechaAdicion;
     
     @Column(name = "USUARIO_ADICIONO")
@@ -48,6 +47,7 @@ public class Comentarios {
     
     @PrePersist
     public void prePersist() {
+        this.fechaAdicion = new Date();
         this.estado = "A";
     }
 
